@@ -11,8 +11,8 @@
 <p>This privacy policy applies to the <strong>UnitConverter</strong> app for <strong>Android and iOS</strong> (App ID: <code>com.dimadyuk.unitconverter</code>), together with any related services operated by Dzmitry Dzemidziuk (collectively, the "Application"). Dzmitry Dzemidziuk is hereby referred to as the "Service Provider". This single policy covers both platforms; where a rule applies to only one of them, the platform is stated explicitly.</p>
 
 <br><strong>Summary</strong>
-<p>The Application converts units of measurement entirely on your device. It has no user accounts, requires no registration, and works offline. <strong>The Service Provider operates no servers, collects no personal data, and receives no information about you or about the values you convert.</strong> The Application contains no analytics SDK, no crash-reporting SDK, and no advertising.</p>
-<p>The only data that leaves your device is the information exchanged with the app store and the subscription-management provider when you make or restore a purchase, as described below.</p>
+<p>The Application converts units of measurement entirely on your device. It has no user accounts, requires no registration, and the conversions themselves work offline. <strong>The Service Provider operates no servers of its own and never receives the values you convert, your conversion history, your favourites, or your settings.</strong> The Application displays no advertising and does not track you across other companies' apps or websites.</p>
+<p>What does leave your device is limited to: the information exchanged with the app store and the subscription-management provider when you make or restore a purchase, and the usage and crash diagnostics collected by Firebase Analytics and Firebase Crashlytics so that the Service Provider can understand which features are used and fix crashes. All of this is described below, and analytics and crash reporting can be switched off in the Application's settings.</p>
 
 <br><strong>Data Stored On Your Device Only</strong>
 <p>The following is created by you, stays on your device, and is never transmitted to the Service Provider or to any third party:</p>
@@ -23,9 +23,20 @@
   <li><strong>Conversion history</strong>, where the feature is available — stored locally in an on-device database.</li>
 </ul>
 
+<br><strong>Analytics and Crash Reporting</strong>
+<p>The Application uses <strong>Google Analytics for Firebase</strong> and <strong>Firebase Crashlytics</strong>, provided by Google, to understand how the Application is used in aggregate and to detect and fix defects. These services are used for product improvement only — never for advertising, profiling, or cross-app tracking.</p>
+<ul>
+  <li><strong>Firebase Analytics</strong> may process: a randomly generated app-instance identifier; the events you trigger inside the Application, such as opening a screen, starting a conversion, or completing a purchase; the app version; the device model, operating system and version; the device language; the coarse country or region derived from your IP address; and session timing. <strong>The parameters of your conversions — the numbers you enter, the units you pick, and the results — are not sent as event data.</strong></li>
+  <li><strong>Firebase Crashlytics</strong> may process, when the Application crashes or reports a non-fatal error: the stack trace and exception details; a Crashlytics installation identifier; the app version and build; the device model, operating system and version, orientation, and available memory and storage; the time of the crash; and the technical breadcrumb log leading up to it. It does not capture the contents of your screen or your conversion data.</li>
+  <li>Neither service receives your name, email address, phone number, contacts, files, or precise location.</li>
+</ul>
+<p><strong>How to opt out.</strong> You can disable analytics and crash reporting at any time in the Application's settings; when disabled, no further analytics events or crash reports are sent. Where the law of your country requires your prior consent for this processing, the Application asks for it before any analytics or crash data is collected, and no such data is collected unless you agree. You may also reset the app-instance identifier by reinstalling the Application, and Android users may additionally use the system-level "Opt out of Ads Personalisation" setting.</p>
+<p>Google processes this data as the Service Provider's processor under the Firebase Data Processing and Security Terms. Google's own handling of the data is described in the <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Privacy and Security</a> documentation and the <a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
+
 <br><strong>Data Processed By Third Parties</strong>
 <p>The Application uses the following third-party services. They act as independent controllers or as processors acting on the Service Provider's instructions, and they process the data described here in accordance with their own privacy policies:</p>
 <ul>
+  <li><strong>Google Analytics for Firebase</strong> and <strong>Firebase Crashlytics</strong> — as described in the section above.</li>
   <li><strong>RevenueCat</strong> (subscription and purchase management) — when you make, restore, or check a purchase, RevenueCat may process an anonymous App User ID generated by the Application, device and operating system information, purchase and transaction information, and the receipt or purchase token issued by Apple or Google. RevenueCat does not receive your name or email address from the Application, and the Service Provider never receives your payment card details.</li>
   <li><strong>Apple App Store / StoreKit</strong> (iOS) and <strong>Google Play / Google Play Billing</strong> (Android) — process the purchase itself, including payment, subscription status, and receipts, under your store account. The Service Provider receives only aggregate, non-identifying sales reporting from the stores.</li>
   <li><strong>Google Play In-App Review</strong> (Android) and <strong>SKStoreReviewController</strong> (iOS) — if the Application invites you to rate it, the review is submitted to and handled by the store. The Service Provider does not see whether you were asked, whether you responded, or what you wrote, other than as a public store review.</li>
@@ -37,28 +48,27 @@
 <ul>
   <li>Your name, email address, phone number, or any account credentials</li>
   <li>Your contacts, photos, calendar, files, or microphone or camera data</li>
-  <li>Your precise or coarse location</li>
-  <li>Analytics events or usage statistics — the Application contains no analytics SDK</li>
-  <li>Crash reports or diagnostic logs — the Application contains no crash-reporting SDK</li>
+  <li>Your precise or coarse device location — only the country or region inferred by Google from your IP address for analytics purposes</li>
   <li>The values you convert, your conversion history, your favourites, or your settings</li>
   <li>Advertising identifiers — see the next section</li>
 </ul>
 
 <br><strong>Cookies and Tracking Technologies</strong>
 <p>The Application does not use cookies. It contains no advertising and displays no ads.</p>
-<p><strong>The Application does not track you across other companies' apps or websites.</strong> Specifically:</p>
+<p><strong>The Application does not track you across other companies' apps or websites.</strong> Analytics and crash data are used solely to improve the Application and are not combined with data from other sources to build a profile of you or to target advertising. Specifically:</p>
 <ul>
-  <li><strong>Android</strong> — the Application does not use the Google Advertising ID (GAID/AAID) for advertising or cross-app tracking purposes. In accordance with the Google Play Data Safety declaration for this Application, user data is not used to track users.</li>
+  <li><strong>Android</strong> — the Application does not use the Google Advertising ID (GAID/AAID) for advertising or cross-app tracking purposes. Firebase Analytics identifies an installation by a randomly generated app-instance identifier, not by an advertising identifier. In accordance with the Google Play Data Safety declaration for this Application, user data is not used to track users.</li>
   <li><strong>iOS</strong> — the Application does not use the Advertising Identifier (IDFA). No App Tracking Transparency prompt is shown because the Application does not engage in cross-app tracking as defined by Apple's App Store guidelines.</li>
 </ul>
 
 <br><strong>Legal Basis for Processing (GDPR)</strong>
-<p>If you are located in the European Economic Area (EEA), the limited processing described above rests on the following legal bases:</p>
+<p>If you are located in the European Economic Area (EEA) or the United Kingdom, the processing described above rests on the following legal bases:</p>
 <ul>
-  <li><strong>Contract performance</strong> — processing necessary to deliver the Application's paid features, to verify your entitlement, and to restore your purchase across your devices.</li>
-  <li><strong>Legal obligation</strong> — where processing is necessary to comply with applicable law, including tax and consumer-protection obligations relating to purchases.</li>
+  <li><strong>Consent</strong> (Art. 6(1)(a) GDPR) — for analytics and crash reporting, where your prior consent is required for the storing of and access to information on your device. You may withdraw your consent at any time in the Application's settings, without affecting the lawfulness of processing carried out before the withdrawal.</li>
+  <li><strong>Contract performance</strong> (Art. 6(1)(b) GDPR) — processing necessary to deliver the Application's paid features, to verify your entitlement, and to restore your purchase across your devices.</li>
+  <li><strong>Legitimate interests</strong> (Art. 6(1)(f) GDPR) — the Service Provider's interest in keeping the Application stable and secure and in understanding, in aggregate, which features are used, where that interest is not overridden by your rights and freedoms and to the extent consent is not required.</li>
+  <li><strong>Legal obligation</strong> (Art. 6(1)(c) GDPR) — where processing is necessary to comply with applicable law, including tax and consumer-protection obligations relating to purchases.</li>
 </ul>
-<p>The Service Provider does not rely on legitimate interests for analytics or crash reporting, because the Application performs neither.</p>
 
 <br><strong>Your Rights</strong>
 <p>Depending on your jurisdiction, you may have the following rights regarding your personal data:</p>
@@ -68,30 +78,33 @@
   <li>Right to erasure — to request deletion of your personal data</li>
   <li>Right to restriction of processing</li>
   <li>Right to data portability — to receive your data in a structured, machine-readable format</li>
-  <li>Right to object to processing</li>
+  <li>Right to object to processing carried out on the basis of legitimate interests</li>
+  <li>Right to withdraw consent at any time, where processing is based on consent</li>
   <li>Right to lodge a complaint with your national data protection authority. In Poland this is the President of the Personal Data Protection Office (Prezes Urzędu Ochrony Danych Osobowych).</li>
 </ul>
-<p>Because the Service Provider holds no personal data about you, a request addressed to the Service Provider will usually be answered by confirming that no such data exists, and by directing you to the relevant third-party provider or app store where their records are concerned. Data held on your device is under your own control and can be deleted in the Application or by uninstalling it. To exercise these rights, contact the Service Provider at dimadyuk.dev@gmail.com.</p>
+<p>The analytics and crash data described above are not linked to your name or to any account, so the Service Provider is normally unable to identify you from them; to act on a request concerning that data, the Service Provider may need the app-instance identifier shown in the Application's settings. Data held on your device is under your own control and can be deleted in the Application or by uninstalling it. To exercise these rights, contact the Service Provider at dimadyuk.dev@gmail.com.</p>
 
 <br><strong>Your California Privacy Rights (CCPA/CPRA)</strong>
-<p>If you are a California resident, you have the right to know what personal information is collected, the right to delete personal information, the right to opt out of the sale or sharing of personal information, and the right to non-discrimination for exercising these rights. <strong>The Service Provider does not sell or share your personal information, and has not done so in the preceding twelve months.</strong> To exercise your CCPA/CPRA rights, contact the Service Provider at dimadyuk.dev@gmail.com.</p>
+<p>If you are a California resident, you have the right to know what personal information is collected, the right to delete personal information, the right to correct inaccurate personal information, the right to opt out of the sale or sharing of personal information, and the right to non-discrimination for exercising these rights. <strong>The Service Provider does not sell your personal information and does not share it for cross-context behavioural advertising, and has not done so in the preceding twelve months.</strong> To exercise your CCPA/CPRA rights, contact the Service Provider at dimadyuk.dev@gmail.com.</p>
 
 <br><strong>Third-Party Privacy Policies</strong>
 <p>The third-party services used by the Application have their own privacy policies:</p>
 <ul>
+  <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Google Analytics for Firebase and Firebase Crashlytics</a></li>
   <li><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">RevenueCat</a> (subscription management)</li>
   <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple App Store / StoreKit</a> (iOS)</li>
   <li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer">Google Play Services / Google Play Billing</a> (Android)</li>
 </ul>
 
 <br><strong>International Data Transfers</strong>
-<p>RevenueCat, Apple, and Google may process data in countries outside your country of residence, including outside the European Economic Area (EEA). Those transfers are governed by the transfer mechanisms described in each provider's privacy policy, typically Standard Contractual Clauses (SCCs) approved by the European Commission or an adequacy decision. The Service Provider itself transfers no personal data, because it holds none.</p>
+<p>Google, RevenueCat, and Apple may process data in countries outside your country of residence, including outside the European Economic Area (EEA). Those transfers are governed by the transfer mechanisms described in each provider's privacy policy, typically Standard Contractual Clauses (SCCs) approved by the European Commission or an adequacy decision. The Service Provider itself operates no servers and stores no personal data outside these services.</p>
 
 <br><strong>Data Retention</strong>
 <ul>
   <li><strong>Data on your device</strong> (settings, favourites, conversion history) — retained until you delete it in the Application or uninstall the Application. The Service Provider has no access to it and therefore cannot delete it for you.</li>
-  <li><strong>Data held by the Service Provider</strong> — none. The Service Provider operates no servers and maintains no user database.</li>
-  <li><strong>Data held by third-party providers</strong> — retained according to each provider's own retention policy; see the privacy policies linked above. RevenueCat retains purchase and entitlement records for as long as needed to provide the service and to meet its own legal obligations; Apple and Google retain purchase records under their respective policies and applicable tax law.</li>
+  <li><strong>Analytics data</strong> — user-level and event-level analytics data are retained in Firebase for the retention period configured for this Application, after which they are deleted automatically; aggregated, non-identifying reporting may be retained indefinitely.</li>
+  <li><strong>Crash reports</strong> — retained in Crashlytics for the period set by the service, typically no more than 90 days for an individual crash record.</li>
+  <li><strong>Purchase records</strong> — retained by RevenueCat, Apple, and Google according to each provider's own retention policy and applicable tax law; see the privacy policies linked above.</li>
   <li><strong>Correspondence</strong> — if you email the Service Provider, that message and its address are retained for as long as needed to answer you and to keep a record of the request, and no longer than 24 months thereafter unless a longer period is required by law.</li>
 </ul>
 
@@ -99,22 +112,21 @@
 <p>The Application is a general-purpose utility and is not directed to children. It does not knowingly collect personal information from children. If you are a parent or guardian and believe a child has provided the Service Provider with personal information, please contact dimadyuk.dev@gmail.com so that the necessary actions can be taken.</p>
 
 <br><strong>Security</strong>
-<p>Data created by you inside the Application never leaves your device, which by design limits its exposure. On the device it is protected by the operating system's own application sandbox and, where enabled by you, by device encryption. The Service Provider provides appropriate technical and organisational safeguards for the limited information it handles, such as email correspondence.</p>
+<p>All network communication of the Application takes place over encrypted HTTPS/TLS connections. Data stored on your device is protected by the security mechanisms of your operating system's application sandbox. No method of transmission or storage is completely secure, and absolute security cannot be guaranteed.</p>
 
 <br><strong>Device Backups</strong>
 <p>Uninstalling the Application normally removes the settings, favourites, and conversion history stored locally on the device, subject to the backup and restore mechanisms of your operating system: where device backup is enabled, a copy of this data may exist in your own Google or Apple backup and may be restored when you reinstall the Application or set up a new device. Those backups are held under your own store account, not by the Service Provider.</p>
 
 <br><strong>Data Breach Notification</strong>
-<p>If a data breach occurs that affects your personal data, the Service Provider will notify you and the competent supervisory authority in accordance with applicable legal requirements, including, where required, providing information about the nature of the breach and the steps being taken to address it.</p>
+<p>In the event of a personal data breach affecting the Application, the Service Provider will notify the competent supervisory authority within 72 hours of becoming aware of it where required by Article 33 GDPR, and will inform affected users without undue delay where the breach is likely to result in a high risk to their rights and freedoms.</p>
 
 <br><strong>Changes</strong>
-<p>The Service Provider may update this Privacy Policy from time to time — in particular if a future version of the Application introduces analytics, crash reporting, or any other data collection. The Service Provider will notify you of material changes by posting the updated Privacy Policy with a new effective date, and, where required by law, will seek your consent before those changes take effect.</p>
-<p>Previous versions of this Privacy Policy are available in the public repository of this site and on request by contacting the Service Provider at dimadyuk.dev@gmail.com.</p>
+<p>This Privacy Policy may be updated from time to time. Changes will be communicated by updating this page and its effective date. You are advised to review this page periodically. Continued use of the Application after a change constitutes acceptance of the updated policy.</p>
 
 <br><strong>Contact Us</strong>
-<p>If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at <a href="mailto:dimadyuk.dev@gmail.com">dimadyuk.dev@gmail.com</a>.</p>
+<p>If you have any questions about this Privacy Policy or about how your data is handled, contact the Service Provider at <a href="mailto:dimadyuk.dev@gmail.com">dimadyuk.dev@gmail.com</a>.</p>
 
-<br><p>This privacy policy is effective as of 2026-08-28.</p>
+<br><p>This Privacy Policy is effective as of 2026-08-28.</p>
 
 <hr>
 <p><em>UnitConverter — App ID: <code>com.dimadyuk.unitconverter</code> — Android &amp; iOS</em><br>
