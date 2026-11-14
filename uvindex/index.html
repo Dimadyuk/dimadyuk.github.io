@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UV Index Widget &amp; SPF Forecast</title>
+  <meta name="description" content="Real-time UV index, burn time for your skin type, 7-day forecast, SPF timer, vitamin D window, widgets, Apple Watch and Wear OS.">
+  <link rel="canonical" href="https://dimadyuk.github.io/uvindex/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="UV Index Widget &amp; SPF Forecast">
+  <meta property="og:description" content="How many minutes do you have in the sun - right now, and at 3 pm? Burn time for your skin type, SPF timer, UV alerts and widgets.">
+  <meta property="og:url" content="https://dimadyuk.github.io/uvindex/">
+  <meta property="og:image" content="https://dimadyuk.github.io/uvindex/img/og.jpg">
+  <link rel="icon" href="img/icon.png">
+  <style>
+    :root { --brand:#1E6FE0; --bg:#fff; --fg:#14213d; --muted:#5b6678; --card:#f2f6fd; }
+    @media (prefers-color-scheme: dark) { :root { --bg:#0e1626; --fg:#eef3fb; --muted:#9fb0c9; --card:#16233a; } }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:-apple-system,'Helvetica Neue',Helvetica,Arial,sans-serif; background:var(--bg); color:var(--fg); line-height:1.5; }
+    main { max-width:960px; margin:0 auto; padding:32px 16px 48px; }
+    header { text-align:center; padding:24px 0 8px; }
+    header img { width:96px; height:96px; border-radius:22px; }
+    h1 { font-size:2rem; margin:16px 0 8px; }
+    .lead { color:var(--muted); font-size:1.1rem; max-width:620px; margin:0 auto 24px; }
+    .badges a { display:inline-block; margin:4px; padding:12px 20px; border-radius:12px; background:var(--brand); color:#fff; text-decoration:none; font-weight:600; }
+    .shots { display:flex; gap:16px; overflow-x:auto; padding:32px 0; scroll-snap-type:x mandatory; }
+    .shots img { height:480px; width:auto; border-radius:20px; scroll-snap-align:center; flex:none; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; }
+    .card { background:var(--card); border-radius:16px; padding:20px; }
+    .card h2 { font-size:1.1rem; margin:0 0 8px; color:var(--brand); }
+    .card p { margin:0; }
+    footer { text-align:center; color:var(--muted); font-size:.9rem; margin-top:40px; }
+    footer a { color:var(--brand); }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="img/icon.png" alt="UV Index app icon" width="96" height="96">
+    <h1>UV Index Widget &amp; SPF Forecast</h1>
+    <p class="lead">How many minutes do you have in the sun - right now, and at 3 pm? Real-time UV, burn time for your skin type and your exact location.</p>
+    <p class="badges">
+      <a href="https://apps.apple.com/app/id6757675958">Download on the App Store</a>
+      <a href="https://play.google.com/store/apps/details?id=app.weather.sun.uv.index">Get it on Google Play</a>
+    </p>
+  </header>
+
+  <div class="shots">
+    <img src="img/01_uv_index.jpg" alt="Live UV index and burn time" loading="lazy">
+    <img src="img/02_timer.jpg" alt="SPF timer" loading="lazy">
+    <img src="img/03_forecast.jpg" alt="7-day UV forecast" loading="lazy">
+    <img src="img/05_widgets.jpg" alt="Home-screen widgets" loading="lazy">
+  </div>
+
+  <section class="grid">
+    <div class="card"><h2>Burn time for any hour</h2><p>Set your skin type once and see how long unprotected skin can stay in the sun, for every hour of the day.</p></div>
+    <div class="card"><h2>SPF timer</h2><p>Sunscreen reapplication reminders at the right moment, including after swimming or sweating.</p></div>
+    <div class="card"><h2>7-day UV forecast</h2><p>Hourly breakdown and daily peaks so you can plan walks, workouts and beach days. Two days free, full week in Premium.</p></div>
+    <div class="card"><h2>Daily UV alerts</h2><p>A morning summary and a warning before UV crosses your threshold. Never more than two a day.</p></div>
+    <div class="card"><h2>Vitamin D window</h2><p>See when the sun is strong enough and how many minutes you need, while staying below your burn time.</p></div>
+    <div class="card"><h2>Widgets, Apple Watch &amp; Wear OS</h2><p>Live UV on your home screen and your wrist, with watch-face complications.</p></div>
+  </section>
+
+  <footer>
+    <p>No account needed. No ads. Your settings and saved places stay on your device.</p>
+    <p>UV, forecast and air-quality data by <a href="https://open-meteo.com/">Open-Meteo.com</a> (CC BY 4.0). UV Index is not a medical device.</p>
+    <p>
+      <a href="privacy-policy.html">Privacy Policy</a> ·
+      <a href="terms-conditions.html">Terms &amp; Conditions</a> ·
+      <a href="support.html">Support</a> ·
+      <a href="mailto:dimadyuk.dev@gmail.com">Contact</a>
+    </p>
+  </footer>
+</main>
+</body>
+</html>
