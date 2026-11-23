@@ -13,7 +13,7 @@
 
 <br><strong>Summary</strong>
 <p>The Application shows the UV index and related sun-safety information for your location. It has no user accounts and requires no registration. <strong>The Service Provider operates no servers of its own and does not receive your location, your skin type, your sunscreen settings or your saved places.</strong> Your settings and saved places stay on your device.</p>
-<p>What leaves your device is limited to: (1) <strong>your location coordinates</strong>, sent to the Open-Meteo weather service so it can return the UV and air-quality data for where you are; (2) location lookups handled by your platform's geocoder (Apple or Google) to name a place or find a city you search for; (3) usage and crash diagnostics collected by Firebase Analytics and Firebase Crashlytics; and (4) purchase information handled by the app store and RevenueCat when you subscribe or restore a purchase. <strong>The Application does not currently display advertising and does not use the advertising identifier.</strong> Everything is described below.</p>
+<p>What leaves your device is limited to: (1) <strong>your location coordinates</strong>, sent to the Open-Meteo weather service so it can return the UV and air-quality data for where you are; (2) location lookups handled by your platform's geocoder (Apple or Google) to name a place or find a city you search for; (3) usage and crash diagnostics collected by Firebase Analytics and Firebase Crashlytics; (4) purchase information handled by the app store and RevenueCat when you subscribe or restore a purchase; and (5) <strong>advertising data</strong>, exchanged with Google AdMob when the free version shows ads (device advertising identifier, approximate location derived from your IP address, ad interactions and diagnostics). <strong>The free version of the Application shows ads; Premium removes them.</strong> Your location coordinates, skin type, SPF settings and saved places are never put into ad requests. Everything is described below.</p>
 
 <br><strong>Data Stored On Your Device Only</strong>
 <p>The following stays on your device and is never transmitted to the Service Provider:</p>
@@ -40,7 +40,7 @@
 <br><strong>Analytics and Crash Reporting</strong>
 <p>The Application uses <strong>Google Analytics for Firebase</strong>, <strong>Firebase Crashlytics</strong> and <strong>Firebase Remote Config</strong>, provided by Google, to understand how features are used in aggregate, to detect and fix defects, and to run product experiments (for example which onboarding variant is shown). They are used for product improvement and are not used to build advertising profiles.</p>
 <ul>
-  <li><strong>Firebase Analytics</strong> may process: a randomly generated app-instance identifier; the events you trigger inside the Application (opening a screen, using the SPF timer, viewing the paywall, turning alerts on, completing onboarding, and similar); event parameters that describe your choices, such as the <strong>skin type</strong> you select (Fitzpatrick type), your <strong>SPF</strong> and sun-exposure choices, your vitamin D goal and the goals you pick during onboarding, and the UV index value shown; user properties such as app language, theme, whether you have premium or are in a trial, and whether the widget is installed; the app version; the device model, operating system and version; and the coarse country or region derived from your IP address. <strong>Your coordinates, the names of your saved places and the text of your searches are not sent.</strong> The Application does not set a user ID and does not receive or use your advertising identifier (on Android the advertising-ID permission is removed; on iOS the Application does not request tracking permission).</li>
+  <li><strong>Firebase Analytics</strong> may process: a randomly generated app-instance identifier; the events you trigger inside the Application (opening a screen, using the SPF timer, viewing the paywall, turning alerts on, completing onboarding, and similar); event parameters that describe your choices, such as the <strong>skin type</strong> you select (Fitzpatrick type), your <strong>SPF</strong> and sun-exposure choices, your vitamin D goal and the goals you pick during onboarding, and the UV index value shown; user properties such as app language, theme, whether you have premium or are in a trial, and whether the widget is installed; the app version; the device model, operating system and version; and the coarse country or region derived from your IP address. <strong>Your coordinates, the names of your saved places and the text of your searches are not sent.</strong> The Application does not set a user ID, and Firebase Analytics is configured not to collect the advertising identifier and not to use it for advertising personalization (advertising is handled separately by Google AdMob, see "Advertising" below).</li>
   <li><strong>Firebase Crashlytics</strong> may process, when the Application crashes or reports a non-fatal error: the stack trace and exception details; an installation identifier; the app version and build; the device model, operating system and version, and available memory and storage; the time of the crash; and the technical log leading up to it. It does not capture the contents of your screen.</li>
   <li><strong>Firebase Remote Config</strong> downloads configuration values (such as which onboarding variant to show) and receives the installation identifier and device metadata needed to deliver them.</li>
 </ul>
@@ -50,7 +50,15 @@
 <p>Premium features are sold as auto-renewing subscriptions through the Apple App Store or Google Play. Purchases are processed by the store, and managed with the help of <strong>RevenueCat</strong>. When you make, restore or check a purchase, RevenueCat may process an anonymous App User ID generated by the Application, device and operating-system information, purchase and transaction information, and the receipt or purchase token issued by Apple or Google. RevenueCat does not receive your name or email address from the Application, and the Service Provider never receives your payment card details.</p>
 
 <br><strong>Advertising</strong>
-<p>The Application does not currently display advertising, does not use the advertising identifier (IDFA / Google Advertising ID) and does not track you across other companies' apps or websites. If advertising is introduced in a future version, this policy will be updated, and any required consent request will be shown, before it is released.</p>
+<p>The free version of the Application shows advertising provided by <strong>Google AdMob</strong>: a banner on the main tabs and an occasional full-screen (interstitial) ad when you open a tab or a guide article, at most once every two minutes. <strong>Premium removes all ads.</strong> No ads are shown during the first session after installation, on onboarding, on the paywall or on the locations screen.</p>
+<ul>
+  <li><strong>What AdMob may collect.</strong> To request, deliver, measure and secure ads, the Google Mobile Ads SDK may process: the device advertising identifier (Google Advertising ID on Android, IDFA on iOS, only if you allow tracking on iOS), your IP address and the approximate location derived from it, device and operating-system information, app identifiers, ad impressions and interactions (views, clicks), and diagnostic and performance data. <strong>The Application does not pass your coordinates, saved places, skin type, SPF settings, name or email address to ad requests.</strong></li>
+  <li><strong>Consent.</strong> Where required by law (for example in the EEA, the United Kingdom and Switzerland, and in some US states) the Application shows the Google User Messaging Platform (UMP) consent form the first time the UV Index screen is shown, never over onboarding. On iOS the system App Tracking Transparency prompt follows. If you do not consent, or you decline tracking, only non-personalized ads are requested: they are based on context such as the content of the app and general location, not on your advertising profile.</li>
+  <li><strong>Changing your choice.</strong> Where the consent form is required, Settings &gt; "Ad privacy settings" reopens it so you can change or withdraw consent at any time. You can also reset or limit your advertising identifier in your device settings (Android: Settings &gt; Privacy &gt; Ads; iOS: Settings &gt; Privacy &amp; Security &gt; Tracking), and subscribing to Premium stops ads altogether.</li>
+  <li><strong>Tracking.</strong> If you allow tracking on iOS, the advertising identifier is used by Google to show more relevant ads and to measure them across apps and websites owned by other companies. If you decline, the Application does not track you.</li>
+  <li><strong>Not for children.</strong> The Application is not directed to children, and ads are not requested with child-directed treatment; see "Children" below.</li>
+</ul>
+<p>Google processes this data under its own responsibility as described in the <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Google Privacy &amp; Terms</a> and the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>. For more information on how AdMob uses data, see <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">AdMob data usage</a>.</p>
 
 <br><strong>Health and Sun-Safety Information</strong>
 <p>The Application estimates burn time, sunscreen reapplication timing and vitamin D exposure from your UV level, skin type and settings. These are general-purpose estimates, not medical advice or a medical device. The Application does not read or write Apple Health or Health Connect data and does not collect your age, sex, weight or medical history. The skin-type and sun-exposure choices you make are stored on your device and, as described above, may appear as analytics parameters not linked to your name or account.</p>
@@ -63,8 +71,9 @@
   <li><strong>Google Analytics for Firebase</strong>, <strong>Firebase Crashlytics</strong> and <strong>Firebase Remote Config</strong> — as described above.</li>
   <li><strong>RevenueCat</strong> — subscription management, as described above.</li>
   <li><strong>OpenWeatherMap</strong> — weather-condition icons (IP address only).</li>
+  <li><strong>Google AdMob</strong> and the <strong>Google User Messaging Platform (UMP)</strong> — advertising and consent management in the free version, as described in "Advertising".</li>
 </ul>
-<p>If the Application invites you to rate it, the review is submitted to and handled by the store; the Service Provider does not see whether you were asked or what you wrote, other than as a public store review. The Service Provider does not sell your personal information.</p>
+<p>If the Application invites you to rate it, the review is submitted to and handled by the store; the Service Provider does not see whether you were asked or what you wrote, other than as a public store review. The Service Provider does not sell your personal information for money; see the California section below regarding advertising.</p>
 
 <br><strong>What The Application Does Not Collect</strong>
 <ul>
@@ -72,16 +81,16 @@
   <li>Your contacts, photos, calendar, files, microphone or camera data</li>
   <li>Your location in the background, or any history of where you have been</li>
   <li>Health records, age, sex, weight or medical data</li>
-  <li>An advertising identifier</li>
+  <li>Your coordinates, skin type or SPF settings in ad requests (the advertising identifier is processed by Google AdMob only in the free version, see "Advertising")</li>
 </ul>
 
 <br><strong>Cookies and Tracking Technologies</strong>
-<p>The Application does not use browser cookies. It does not track you across other companies' apps and websites and does not combine your data with data from other sources. On iOS the Application's privacy manifest declares that it does not track you, and it does not show the App Tracking Transparency prompt. Firebase identifies an installation by a randomly generated app-instance identifier, which you can reset by reinstalling the Application.</p>
+<p>The Application does not use browser cookies. Apart from advertising, it does not track you across other companies' apps and websites and does not combine your data with data from other sources. In the free version, Google AdMob uses the advertising identifier and similar technologies to deliver and measure ads. On iOS this is done for tracking purposes only if you allow it in the App Tracking Transparency prompt, and the Application's privacy manifest declares this tracking. Firebase identifies an installation by a randomly generated app-instance identifier, which you can reset by reinstalling the Application.</p>
 
 <br><strong>Legal Basis for Processing (GDPR)</strong>
 <p>If you are located in the European Economic Area (EEA) or the United Kingdom, the processing described above rests on the following legal bases:</p>
 <ul>
-  <li><strong>Consent</strong> (Art. 6(1)(a) GDPR) — for access to your device location, which you grant through the system permission prompt and can withdraw at any time in your device settings.</li>
+  <li><strong>Consent</strong> (Art. 6(1)(a) GDPR) — for access to your device location, which you grant through the system permission prompt and can withdraw at any time in your device settings, and for personalized advertising and the use of the advertising identifier, which you grant in the consent form (and on iOS the tracking prompt) and can withdraw at any time via Settings &gt; "Ad privacy settings" or your device settings.</li>
   <li><strong>Contract performance</strong> (Art. 6(1)(b) GDPR) — processing needed to deliver the Application's features, such as retrieving UV data for your location, verifying your premium entitlement and restoring purchases.</li>
   <li><strong>Legitimate interests</strong> (Art. 6(1)(f) GDPR) — the Service Provider's interest in keeping the Application stable and secure and in understanding, in aggregate, which features are used, which is the basis for the analytics, crash reporting and configuration described above. You may object at any time by writing to the Service Provider.</li>
   <li><strong>Legal obligation</strong> (Art. 6(1)(c) GDPR) — where necessary to comply with applicable law, including tax and consumer-protection obligations relating to purchases.</li>
@@ -102,7 +111,7 @@
 <p>The analytics and crash data described above are not linked to your name or to any account, so the Service Provider is normally unable to identify you from them and may be unable to act on a request that cannot be tied to a specific installation. Data held on your device is under your own control: you can delete saved places and settings in the Application, or delete everything by uninstalling it. <strong>To request deletion of data associated with your installation, or to exercise any other right, contact</strong> <a href="mailto:dimadyuk.dev@gmail.com">dimadyuk.dev@gmail.com</a>.</p>
 
 <br><strong>Your California Privacy Rights (CCPA/CPRA)</strong>
-<p>If you are a California resident, you have the right to know what personal information is collected, to delete it, to correct inaccurate information, to opt out of the sale or sharing of personal information, and to non-discrimination for exercising these rights. <strong>The Service Provider does not sell your personal information and does not share it for cross-context behavioural advertising.</strong> To exercise your rights, write to <a href="mailto:dimadyuk.dev@gmail.com">dimadyuk.dev@gmail.com</a>. The Service Provider does not knowingly sell or share the personal information of consumers under 16 years of age.</p>
+<p>If you are a California resident, you have the right to know what personal information is collected, to delete it, to correct inaccurate information, to opt out of the sale or sharing of personal information, and to non-discrimination for exercising these rights. <strong>The Service Provider does not sell your personal information for money.</strong> In the free version, however, the advertising identifier, approximate location and ad interactions processed by Google AdMob may count as a "sale" or "sharing" for cross-context behavioural advertising under California and other US state laws. You can opt out at any time: choose the privacy option in the consent form (Settings &gt; "Ad privacy settings", shown where required), turn off personalized ads or reset the advertising identifier in your device settings, or subscribe to Premium to stop ads entirely. You can also write to <a href="mailto:dimadyuk.dev@gmail.com">dimadyuk.dev@gmail.com</a>. To exercise your rights, write to <a href="mailto:dimadyuk.dev@gmail.com">dimadyuk.dev@gmail.com</a>. The Service Provider does not knowingly sell or share the personal information of consumers under 16 years of age.</p>
 
 <br><strong>Third-Party Privacy Policies</strong>
 <ul>
@@ -112,6 +121,7 @@
   <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple</a> (App Store, MapKit, StoreKit)</li>
   <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google</a> (Google Play, Play Billing, Android geocoder)</li>
   <li><a href="https://openweathermap.org/privacy-policy" target="_blank" rel="noopener noreferrer">OpenWeatherMap</a></li>
+  <li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google AdMob and advertising technologies</a></li>
 </ul>
 
 <br><strong>International Data Transfers</strong>
@@ -122,13 +132,14 @@
   <li><strong>Data on your device</strong> (settings, saved places, cached weather data, widget and watch snapshots) — retained until you delete it in the Application or uninstall the Application. The Service Provider has no access to it and cannot delete it for you.</li>
   <li><strong>Analytics data</strong> — retained in Firebase for the retention period configured for this Application, after which it is deleted automatically; aggregated, non-identifying reporting may be retained indefinitely.</li>
   <li><strong>Crash reports</strong> — retained in Crashlytics for the period set by the service, typically no more than 90 days for an individual crash record.</li>
+  <li><strong>Advertising data</strong> — processed and retained by Google AdMob under Google's own policies; the Service Provider does not store it.</li>
   <li><strong>Weather requests</strong> — the coordinates sent to Open-Meteo are processed to answer the request; any logs are kept under Open-Meteo's own policy.</li>
   <li><strong>Purchase records</strong> — retained by RevenueCat, Apple and Google according to each provider's own retention policy and applicable tax law.</li>
   <li><strong>Correspondence</strong> — if you email the Service Provider, that message and its address are retained for as long as needed to answer you and keep a record of the request, and no longer than 24 months thereafter unless a longer period is required by law.</li>
 </ul>
 
 <br><strong>Children</strong>
-<p>The Application is a general-purpose sun-safety tool and is not directed to children under 13 (or the higher minimum age in your country). It does not knowingly collect personal information from children. If you are a parent or guardian and believe a child has provided the Service Provider with personal information, please contact <a href="mailto:dimadyuk.dev@gmail.com">dimadyuk.dev@gmail.com</a> so that the necessary actions can be taken.</p>
+<p>The Application is a general-purpose sun-safety tool and is not directed to children under 13 (or the higher minimum age in your country). It does not knowingly collect personal information from children, and ads are not requested with child-directed treatment. If you are a parent or guardian and believe a child has provided the Service Provider with personal information, please contact <a href="mailto:dimadyuk.dev@gmail.com">dimadyuk.dev@gmail.com</a> so that the necessary actions can be taken.</p>
 
 <br><strong>Security</strong>
 <p>All network communication of the Application takes place over encrypted HTTPS/TLS connections. Data stored on your device is protected by the security mechanisms of your operating system's application sandbox. No method of transmission or storage is completely secure, and absolute security cannot be guaranteed.</p>
@@ -145,7 +156,7 @@
 <br><strong>Contact Us</strong>
 <p>If you have any questions about this Privacy Policy or about how your data is handled, contact the Service Provider at <a href="mailto:dimadyuk.dev@gmail.com">dimadyuk.dev@gmail.com</a>.</p>
 
-<br><p>This Privacy Policy is effective as of 2026-11-14.</p>
+<br><p>This Privacy Policy is effective as of 2026-11-23.</p>
 
 <hr>
 <p><em>UV Index — Android, iOS, Wear OS &amp; Apple Watch</em><br>
