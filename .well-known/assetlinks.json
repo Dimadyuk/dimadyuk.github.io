@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.weather.sun.uv.index",
+      "sha256_cert_fingerprints": [
+        "2B:95:C1:D9:53:AF:F0:44:BE:8F:57:C8:47:7A:2C:63:F7:0A:6E:1E:2F:79:00:1C:E6:BF:A9:36:B8:3C:04:E9"
+      ]
+    }
+  }
+]
