@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>UV Index - get the app</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; text-align:center; padding:64px 20px; color:#1b2a3a; }
+  a.btn { display:inline-block; margin:8px; padding:14px 22px; border-radius:12px; background:#1E6FE0; color:#fff; text-decoration:none; font-weight:600; }
+</style>
+</head>
+<body>
+<h1>UV Index</h1>
+<p id="msg">Opening the store…</p>
+<p id="buttons" hidden>
+  <a class="btn" id="ios" href="#">App Store</a>
+  <a class="btn" id="android" href="#">Google Play</a>
+</p>
+<script>
+// Smart link: /uvindex/get/?s=<source>&m=<medium>&c=<campaign>&n=<content>
+// Android -> Google Play with Install Referrer (utm_*), iOS -> App Store campaign (pt/ct), desktop -> buttons.
+// GA4 web stream (fill in to count link clicks); iOS provider token from App Store Connect -> Campaign links.
+var GA_MEASUREMENT_ID = '';
+var APPSTORE_PROVIDER_TOKEN = '';
+var PLAY_ID = 'app.weather.sun.uv.index';
+var APPSTORE_ID = '6757675958';
+
+var q = new URLSearchParams(location.search);
+function clean(v, fallback) {
+  v = (v || '').toLowerCase().replace(/[^a-z0-9_-]+/g, '_').replace(/^_+|_+$/g, '').slice(0, 100);
+  return v || fallback;
+}
+var s = clean(q.get('s') || q.get('utm_source'), 'unknown');
+var m = clean(q.get('m') || q.get('utm_medium'), 'unknown');
+var c = clean(q.get('c') || q.get('utm_campaign'), 'unknown');
+var n = clean(q.get('n') || q.get('utm_content'), '');
+
+var ua = navigator.userAgent;
+var isAndroid = /Android/i.test(ua);
+var isIos = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+function playUrl() {
+  var ref = 'utm_source=' + s + '&utm_medium=' + m + '&utm_campaign=' + c + (n ? '&utm_content=' + n : '');
+  ['gclid', 'fbclid', 'ttclid'].forEach(function (k) { if (q.get(k)) ref += '&' + k + '=' + encodeURIComponent(q.get(k)); });
+  return 'https://play.google.com/store/apps/details?id=' + PLAY_ID + '&referrer=' + encodeURIComponent(ref);
+}
+function appStoreUrl() {
+  var ct = [s, m, c, n].filter(Boolean).join('_').slice(0, 40);
+  var url = 'https://apps.apple.com/app/id' + APPSTORE_ID + '?mt=8';
+  if (APPSTORE_PROVIDER_TOKEN) url += '&pt=' + APPSTORE_PROVIDER_TOKEN + '&ct=' + encodeURIComponent(ct);
+  return url;
+}
+
+document.getElementById('ios').href = appStoreUrl();
+document.getElementById('android').href = playUrl();
+
+function go() {
+  if (isAndroid) location.replace(playUrl());
+  else if (isIos) location.replace(appStoreUrl());
+  else {
+    document.getElementById('msg').textContent = 'Choose your store';
+    document.getElementById('buttons').hidden = false;
+  }
+}
+
+if (GA_MEASUREMENT_ID) {
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { dataLayer.push(arguments); };
+  gtag('js', new Date());
+  gtag('config', GA_MEASUREMENT_ID, { send_page_view: false });
+  gtag('event', 'link_click', {
+    link_source: s, link_medium: m, link_campaign: c, link_content: n,
+    os: isAndroid ? 'android' : isIos ? 'ios' : 'desktop', transport_type: 'beacon'
+  });
+  var el = document.createElement('script');
+  el.async = true;
+  el.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+  document.head.appendChild(el);
+  setTimeout(go, 300);
+} else {
+  go();
+}
+</script>
+</body>
+</html>

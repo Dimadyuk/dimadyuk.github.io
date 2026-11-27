@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["XU8D3N4NM3.app.weather.sun.uv.index.UVIndex"],
+        "components": [{ "/": "/uvindex/get/*" }]
+      }
+    ]
+  }
+}
